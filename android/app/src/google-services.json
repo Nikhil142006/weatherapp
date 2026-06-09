@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "660659680309",
+    "project_id": "farmers-weather-app-ecba5",
+    "storage_bucket": "farmers-weather-app-ecba5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660659680309:android:c82e90837049b5dda6ed7c",
+        "android_client_info": {
+          "package_name": "com.example.weather_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDihnJ5nklRAaWIa1us7mZZdh6Jfj4pNNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

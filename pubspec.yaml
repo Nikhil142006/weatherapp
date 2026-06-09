@@ -1,0 +1,80 @@
+name: weather_app
+description: A sleek farmer's weather app with OTP login, live alerts, and agricultural insights.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # -------------------------
+  # Core Packages
+  # -------------------------
+  cupertino_icons: ^1.0.8
+  http: ^1.2.1
+  google_fonts: ^6.2.1
+  intl: ^0.20.2
+  flutter_animate: ^4.5.2
+  flutter_typeahead: ^5.2.0
+  youtube_player_flutter: ^9.0.2
+  youtube_player_iframe: ^5.1.3
+
+
+  # -------------------------
+  # Firebase (Core, Auth, Firestore)
+  # -------------------------
+  firebase_core: ^3.5.0
+  firebase_auth: ^5.3.1
+  cloud_firestore: ^5.4.4
+
+  # -------------------------
+  # Location, Notifications, Background Tasks
+  # -------------------------
+  geolocator: ^14.0.2
+  flutter_local_notifications: ^19.4.2
+  workmanager: ^0.9.0+3
+
+  # -------------------------
+  # Local Storage (for alerts, preferences)
+  # -------------------------
+  shared_preferences: ^2.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/logo.png
+    - assets/images/weather/sun.png
+    - assets/images/weather/cloud.png
+    - assets/images/weather/rain.png
+    - assets/images/weather/thunderstorm.png
+
+# ----------------------------------
+# App Icon Configuration
+# ----------------------------------
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.png"
+  adaptive_icon_background: "#2196F3"
+  adaptive_icon_foreground: "assets/images/logo.png"
+
+# ----------------------------------
+# Splash Screen Configuration
+# ----------------------------------
+flutter_native_splash:
+  color: "#2196F3"
+  image: assets/images/logo.png
+  android: true
+  ios: true
