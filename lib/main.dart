@@ -480,7 +480,9 @@ class _WeatherHomeState extends State<WeatherHome> {
                                     color: Colors.grey[850],
                                     borderRadius: BorderRadius.circular(16),
                                   ),
-                                  child: Column(
+                                  child: FittedBox(
+                                    fit: BoxFit.scaleDown,
+                                    child: Column(
                                     mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
                                     crossAxisAlignment:
@@ -542,6 +544,7 @@ class _WeatherHomeState extends State<WeatherHome> {
                                         ],
                                       ),
                                     ],
+                                  ),
                                   ),
                                 );
                               },
