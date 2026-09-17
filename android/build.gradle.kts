@@ -1,12 +1,21 @@
-// Root build.gradle.kts — Flutter + Firebase (Kotlin DSL)
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
 
-// ⚠️ Do NOT redeclare flutter plugin here — Flutter manages it automatically
+val newBuildDir: Directory = rootProject.layout.buildDirectory.dir("../../build").get()
+rootProject.layout.buildDirectory.value(newBuildDir)
 
-plugins {
-    id("com.android.application") version "8.7.3" apply false
-    id("com.google.gms.google-services") version "4.4.2" apply false
+subprojects {
+    val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
+    project.layout.buildDirectory.value(newSubprojectBuildDir)
+}
+subprojects {
+    project.evaluationDependsOn(":app")
 }
 
 tasks.register<Delete>("clean") {
-    delete(rootProject.buildDir)
+    delete(rootProject.layout.buildDirectory)
 }
